@@ -43,7 +43,7 @@ class PlatformManager:
             self.platforms.pop(0) # Removes oldest (index 0)
 
     def add_platform(self, x, y, width = 150, height = 20, color = AQUA):
-        # Create a new platform and add it to the list
+        # Create a new platform and add it to the list then kill it after 2s
         platform = PlatformStructure(x, y, width, height, color)
         self.platforms.append(platform)
         Timer(2, self.decay).start()
